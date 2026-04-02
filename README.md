@@ -51,7 +51,9 @@ The skill will then guide you through 9 steps:
 
 ## Step 3 - Fill in Variables
 
-After setup, open `memory/variables.md` and enter all values marked `MISSING`. For example:
+After setup, open `memory/variables.md` and enter all values marked `MISSING`. 
+
+For example:
 
 ```text
 AIRTABLE_BASE_ID=appXXXXXXXXXXXXXX
@@ -59,7 +61,7 @@ AIRTABLE_TABLE_NAME=MyTable
 N8N_API_KEY=your-api-key
 ```
 
-You can also set the autonomy level here:
+#### You can also set the autonomy level here:
 
 ```text
 AUTONOMY_LEVEL=3
@@ -67,6 +69,27 @@ AUTONOMY_LEVEL=3
 # 2 = Agent asks between phases
 # 3 = Agent works fully autonomously
 ```
+
+
+#### You can also add References, like Documentation, examples, articals. 
+
+For example: 
+```text
+n8n Workflow as template:
+REF_1=n8n-workflow-id:12345
+
+Documentation:
+REF_2=https://docs.n8n.io/integrations/airtable
+
+Example project:
+REF_3=https://github.com/user/repo
+
+Local file:
+REF_4=./examples/template.json
+```
+
+The agent automatically loads these on the next `/start` and
+uses them as context and templates during construction.
 
 ---
 
