@@ -212,6 +212,45 @@ VAR_2=    # MISSING
 | VAR_1    | MISSING |
 ```
 
+### References in variables.md (always include)
+
+Every framework should have a reference block in `variables.md`.
+The agent automatically loads these as context on startup.
+
+```markdown
+## References
+# Links, workflow-IDs, articles or docs the agent should use.
+# Automatically loaded on startup.
+
+REF_1= # MISSING (URL, n8n-workflow-id:XXXXX, or ./local/file.json)
+REF_2= # optional
+REF_3= # optional
+```
+
+
+#### Supported Reference Formats
+
+| Format | Example | How loaded |
+|---|---|---|
+| HTTP/HTTPS URL | `https://docs.n8n.io/...` | web_fetch |
+| n8n Workflow | `n8n-workflow-id:12345` | n8n MCP |
+| Local file | `./examples/template.json` | Read-Tool |
+| GitHub | `https://github.com/user/repo` | web_fetch |
+| Article | `https://medium.com/...` | web_fetch |
+
+In the agent's system prompt, always include this logic:
+
+```markdown
+## Startup
+1. Check REF_1 to REF_5 in variables.md
+2. URL -> load with web_fetch
+3. n8n-workflow-id:XXX -> load via MCP as template
+4. Local file -> load with Read-Tool
+5. Use references as context - don't copy blindly
+
+```
+
+
 ### progress.md Base Structure
 ```markdown
 # progress.md - Progress
@@ -312,6 +351,8 @@ Then do NOTHING - wait for instruction.
 | Code Generator | coder | reviewer, tester | bash access important |
 | Data Pipeline | pipeline-agent | fetcher, transformer | API credentials in variables.md |
 | Content Creator | writer | editor, memory-writer | No bash needed |
+
+
 
 ---
 
