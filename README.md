@@ -1,4 +1,4 @@
-# agent-framework-planer Skill
+# agent-framework-builder Skill
 
 A meta-skill for openCode that helps plan and build complete agent frameworks for new projects.
 
