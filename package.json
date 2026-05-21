@@ -1,0 +1,13 @@
+{
+  "name": "agent-framework-builder",
+  "version": "1.0.0",
+  "description": "OpenCode meta-skill that guides building a complete agent framework for a new project",
+  "bin": {
+    "agent-framework-builder": "./install.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomekness/agent-framework-builder"
+  },
+  "license": "MIT"
+}
