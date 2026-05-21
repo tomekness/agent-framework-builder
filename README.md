@@ -6,8 +6,10 @@ A meta-skill for openCode that helps plan and build complete agent frameworks fo
 
 ## Installation
 
+#### Via npx (recommended)
+
 ```bash
-# Via npx — interactive, asks global or local
+# Interactive — asks global or local
 npx github:tomekness/agent-framework-builder
 
 # Or specify directly
@@ -15,7 +17,7 @@ npx github:tomekness/agent-framework-builder global
 npx github:tomekness/agent-framework-builder local
 ```
 
-Or manually:
+#### Manually
 
 ```bash
 # Global — available for all projects
