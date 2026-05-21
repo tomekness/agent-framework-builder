@@ -1,6 +1,6 @@
 # agent-framework-builder Skill
 
-A meta-skill for openCode that helps plan and build complete agent frameworks for new projects.
+An **OpenCode-only** skill that guides you through building a complete agent framework for a new project — AGENTS.md, opencode.json, subagents, memory, and commands in one structured 9-step process.
 
 ---
 
