@@ -1,9 +1,16 @@
 ---
 name: agent-framework-builder
-
-description: Plan and build a complete openCode Agent Framework for a new project. Creates AGENTS.md, opencode.json, subagents, skills, commands, and memory structure. Use this skill when you want to set up a new autonomous agent.
-
+description: Use this skill when the user wants to set up, plan, or scaffold an OpenCode agent framework for a new project. Triggers on phrases like "build an agent for this project", "set up an opencode agent", "create an agent framework", "scaffold an autonomous agent", "I want an agent that does X", "set up subagents", "create AGENTS.md", or "plan an agent workflow". Creates AGENTS.md, opencode.json, subagents, skills, commands, and memory structure through a guided 9-step process.
 compatibility: opencode
+allowed-tools: [Read, Write, Edit, Bash]
+applyTo: '**'
+usage: |
+  build an agent framework for this project
+  set up an opencode agent that does X
+  I want an autonomous agent with memory
+  create AGENTS.md and opencode.json for me
+  scaffold a new agent with subagents
+  plan an agent that uses the n8n MCP
 ---
 
 # Agent Framework Builder
